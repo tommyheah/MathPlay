@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/light_purple_bg">
+
+    <TextView
+        android:id="@+id/targetNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Make: 15"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="32dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select numbers to add:"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="8dp"/>
+
+    <HorizontalScrollView
+        android:id="@+id/numbersScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/numbersContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"/>
+    </HorizontalScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your selection:"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="8dp"/>
+
+    <LinearLayout
+        android:id="@+id/selectedNumbers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:minHeight="60dp"
+        android:background="@drawable/container_bg"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/clearBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Clear"
+            android:textSize="18sp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/red"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:weightSum="3">
+
+            <Button
+                android:id="@+id/checkBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Check"
+                android:textSize="18sp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/green"/>
+
+            <Button
+                android:id="@+id/newNumberBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="New Number"
+                android:textSize="18sp"
+                android:backgroundTint="@color/orange"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
